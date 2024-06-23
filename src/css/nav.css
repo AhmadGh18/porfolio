@@ -1,0 +1,40 @@
+.navholder {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+}
+
+.navholder ul {
+    list-style: none;
+
+}
+
+.navholder ul li {
+    display: inline;
+    margin: 0 13px;
+    font-size: 21px;
+    cursor: pointer;
+    color: white;
+}
+
+.last-li {
+    background-color: #cd30bb;
+    padding: 7px;
+    border-radius: 13px;
+}
+
+.navholder a {
+    color: white;
+}
+
+@media screen and (max-width:700px) {
+
+
+    .navholder ul li {
+
+        margin: 0 5px !important;
+        font-size: 17px;
+
+    }
+}
