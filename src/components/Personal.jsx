@@ -11,7 +11,7 @@ const Personal = () => {
         </h1>
         <p>
           A well-diversified portfolio should include equities, bonds, and
-          alternative assets <br /> to balance risk and optimize long-term
+          alternative assets <br />s to balance risk and optimize long-term
           returns
         </p>
         <div
