@@ -4,7 +4,7 @@ import "../css/nav.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 908);
 
   const handleClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,11 +13,14 @@ const Navbar = () => {
   const handleResize = () => {
     setIsMobileView(window.innerWidth <= 768);
     if (window.innerWidth > 768) {
-      setIsMenuOpen(false); // Ensure menu is not open on large screens
+      setIsMenuOpen(true); // Ensure menu is not open on large screens
     }
   };
 
   useEffect(() => {
+    if (window.innerWidth > 768) {
+      setIsMenuOpen(true); // Ensure menu is not open on large screens
+    }
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
