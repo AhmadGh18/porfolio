@@ -26,11 +26,17 @@ const Personal = () => {
             className="first"
             style={{ display: "flex", alignItems: "center" }}
           >
-            <FaDatabase style={{ color: "#f16a6a", marginRight: "8px" }} />
+            <FaDatabase
+              className="iconma"
+              style={{ color: "#f16a6a", marginRight: "8px" }}
+            />
             Backend
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>
-            <FaReact style={{ color: "#00FFFF", marginRight: "8px" }} />
+            <FaReact
+              className="iconma"
+              style={{ color: "#00FFFF", marginRight: "8px" }}
+            />
             Frontend
           </div>
         </div>
