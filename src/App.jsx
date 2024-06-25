@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Personal from "./components/Personal";
+import Aboutus from "./components/Aboutus";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
         <Navbar />
 
         <Personal />
+        <Aboutus />
       </div>
     </>
   );

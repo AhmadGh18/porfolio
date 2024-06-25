@@ -1,0 +1,27 @@
+.aboutus {
+    display: flex;
+    justify-content: flex-start;
+    /* Start alignment for flex items */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    white-space: nowrap;
+    /* Prevent line breaks */
+    padding: 10px;
+    /* Optional padding for spacing */
+    width: 100%;
+    /* Full width */
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+.aboutus a,
+.aboutus div {
+    display: inline-flex;
+    /* Keep elements inline for horizontal scrolling */
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    /* Optional margin between elements */
+}
