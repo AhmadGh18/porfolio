@@ -72,3 +72,8 @@
         transform: rotate(360deg);
     }
 }
+
+.php:hover {
+    filter: drop-shadow(0 0 2em #6280B6);
+
+}

@@ -8,6 +8,7 @@ import Talwind from "../assets/tailwind-css.svg";
 import git from "../assets/github.svg";
 import mysql from "../assets/mysql-original-wordmark.svg";
 import Mate from "../assets/materialui-original.svg";
+import php from "../assets/file-type-php.svg";
 const Aboutus = () => {
   return (
     <div style={{ marginTop: "10px" }}>
@@ -99,6 +100,18 @@ const Aboutus = () => {
         >
           <img src={mysql} alt="mysql" className="mysql logo" />
           Mysql
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            color: "white",
+            justifyConten: "center",
+            alignItems: "center",
+          }}
+        >
+          <img src={php} alt="php" className="php logo" />
+          PHP
         </div>
       </div>
     </div>
