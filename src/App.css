@@ -339,15 +339,22 @@
   .contactleft p,
   .contactleft h6 {
     margin: 17px;
+    color: white !important;
   }
 
   .contactleft h1 {
-    font-size: 26px;
+    font-size: 24px;
+    letter-spacing: 2px;
     margin: 17px;
   }
 
   .contactright {
     width: 90%;
+  }
+
+  .contactright h1 {
+
+    letter-spacing: 2px;
   }
 
 }
