@@ -5,13 +5,13 @@ import viteLogo from "../../public/vite.svg";
 import "../css/Test.css";
 import Laravel from "../assets/laravel.svg";
 import Talwind from "../assets/tailwind-css.svg";
-import git from "../assets/github.svg";
+import git from "../assets/github-mark.svg";
 import mysql from "../assets/mysql-original-wordmark.svg";
 import Mate from "../assets/materialui-original.svg";
 import php from "../assets/file-type-php.svg";
 const Aboutus = () => {
   return (
-    <div style={{ marginTop: "10px" }}>
+    <div style={{ marginTop: "10px", margin: "0 20px" }}>
       <center>
         <h1 style={{ color: "white" }}>Professentianl in</h1>
       </center>
