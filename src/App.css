@@ -95,9 +95,9 @@
 }
 
 .imghold {
-  height: 400px;
+  height: 500px;
   border-radius: 40%;
-  width: 400px;
+  width: 500px;
   background-image: url("./assets/IMG_20240528_202506_247-removebg-preview.png");
   background-size: cover;
   transition: 0.4s ease;
@@ -219,4 +219,135 @@
   text-shadow: 1px 1px 150px rgb(104, 30, 119);
   margin-right: 10px;
   font-style: italic;
+}
+
+.moreinfo {
+  height: 30vh;
+}
+
+.morcontainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.morcontainer span {
+  margin: 0 70px;
+  font-size: 40px;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .morcontainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .morcontainer span {
+    font-size: 30px;
+    margin: 5px 5px;
+  }
+}
+
+.contactus {
+  width: 100%;
+
+}
+
+.contactContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.contactContainer div {
+  margin: 10px;
+}
+
+.contactContainer h1 {
+  font-size: 40px;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.contactContainer h1 span {
+  color: #ff03e2;
+}
+
+.contactContainer p,
+.contactContainer h6 {
+  margin-top: 10px;
+  color: wheat !important;
+  ;
+}
+
+.contactContainer textarea {
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.contactright {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 40%;
+}
+
+.contactright input {
+  margin-top: 10px;
+  border-radius: 7px;
+  padding: 20px;
+}
+
+.contactright h1 {
+  font-size: 30px;
+}
+
+.contactright p {
+  color: white !important;
+  margin-bottom: 4px;
+}
+
+
+.contactright button {
+  height: 50px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #CD30BB;
+  outline: none;
+  border: none;
+  color: white;
+
+}
+
+@media screen and (max-width: 768px) {
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactleft {
+    width: 100%;
+    margin: 10px !important;
+
+  }
+
+  .contactleft p,
+  .contactleft h6 {
+    margin: 17px;
+  }
+
+  .contactleft h1 {
+    font-size: 26px;
+    margin: 17px;
+  }
+
+  .contactright {
+    width: 90%;
+  }
+
 }

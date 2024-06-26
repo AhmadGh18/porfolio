@@ -7,6 +7,8 @@ import Personal from "./components/Personal";
 import Aboutus from "./components/Aboutus";
 import Projects from "./components/Projects";
 import Resemue from "./components/Resemue";
+import MoreInfo from "./components/MoreInfo";
+import Contactus from "./components/Contactus";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +22,8 @@ function App() {
         <Aboutus />
         <Projects />
         <Resemue />
+        <MoreInfo />
+        <Contactus />
       </div>
     </>
   );
