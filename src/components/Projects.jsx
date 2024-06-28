@@ -73,25 +73,27 @@ const Projects = () => {
     ],
     []
   );
+
   const [isVisible, setIsVisible] = useState([]);
+  const [hasScrolledDown, setHasScrolledDown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const updatedVisibility = projects.map((project) => {
-        const element = document.getElementById(project.id);
-        if (!element) return false;
-        const bounding = element.getBoundingClientRect();
-        // Check if at least 50% of the project is visible
-        return (
-          bounding.top + bounding.height / 2 >= 0 &&
-          bounding.bottom - bounding.height / 2 <= window.innerHeight
-        );
-      });
-      setIsVisible(updatedVisibility);
-    };
+      // Check if we haven't scrolled down yet
+      if (!hasScrolledDown) {
+        const firstProject = projects[0];
+        const element = document.getElementById(firstProject.id);
+        if (!element) return;
 
-    // Trigger initial check on mount
-    handleScroll();
+        const bounding = element.getBoundingClientRect();
+        // Check if the top of the first project is below the viewport
+        if (bounding.top <= window.innerHeight) {
+          setIsVisible((prev) => projects.map(() => true)); // Set all projects visible
+          setHasScrolledDown(true); // Mark as scrolled down
+          window.removeEventListener("scroll", handleScroll); // Remove listener after first scroll down
+        }
+      }
+    };
 
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
@@ -100,7 +102,7 @@ const Projects = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [projects]);
+  }, [projects, hasScrolledDown]);
 
   return (
     <div className="projects">

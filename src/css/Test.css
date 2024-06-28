@@ -82,3 +82,13 @@
     filter: drop-shadow(0 0 2em #6280B6);
 
 }
+
+@media screen and (min-width: 1200px) and (max-width:1300px) {
+    .logo {
+        height: 4em !important;
+        margin-left: 0;
+        margin-right: 0;
+        pad: 1px !important;
+    }
+
+}
