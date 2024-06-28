@@ -30,6 +30,10 @@ const Contactus = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          setName("");
+          setEmail("");
+          setMessage("");
+          setSubject("");
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -59,18 +63,21 @@ const Contactus = () => {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
             <input
               placeholder="Email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
             <input
               placeholder="Subject"
               type="text"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
+              required
             />
             <p>Tell me how I can help you</p>
             <textarea
@@ -80,6 +87,7 @@ const Contactus = () => {
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Explain your issue"
               name="message"
+              required
             ></textarea>
             <button type="submit">Submit</button>
           </div>
