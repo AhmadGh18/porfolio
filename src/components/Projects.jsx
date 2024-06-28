@@ -45,32 +45,34 @@
 // };
 
 // export default Projects;
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "../css/projects.css";
 import SingleProject from "./SingleProject";
 import bites from "../assets/dashboard.png";
 import Hiring from "../assets/Screenshot (66).png";
 
 const Projects = () => {
-  const projects = [
-    {
-      id: "1",
-      title: "Bites, Restaurant find app",
-      image: bites,
-      tech: "laravel, react, mysql, tailwind, chartjs and google map",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec lectus mi. Vestibulum fringilla mauris ut magna ultrices, vel vehicula enim posuere. Proin volutpat quam nec sapien fermentum, non congue mauris fringilla. Duis ullamcorper venenatis ligula, sit amet yyyeugiat. Nunc eget augue eget orci volutpat gravida in vel erat.",
-    },
-    {
-      id: "2",
-      title: "Hiring",
-      image: Hiring,
-      tech: "laravel, react, mysql",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec lectus mi. Vestibulum fringilla mauris ut magna ultrices, vel vehicula enim posuere. Proin volutpat quam nec sapien fermentum, non congue mauris fringilla. Duis ullamcorper venenatis ligula, sit amet yyyeugiat. Nunc eget augue eget orci volutpat gravida in vel erat.",
-    },
-  ];
-
+  const projects = useMemo(
+    () => [
+      {
+        id: "1",
+        title: "Bites, Restaurant find app",
+        image: bites,
+        tech: "laravel, react, mysql, tailwind, chartjs and google map",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec lectus mi. Vestibulum fringilla mauris ut magna ultrices, vel vehicula enim posuere. Proin volutpat quam nec sapien fermentum, non congue mauris fringilla. Duis ullamcorper venenatis ligula, sit amet yyyeugiat. Nunc eget augue eget orci volutpat gravida in vel erat.",
+      },
+      {
+        id: "2",
+        title: "Hiring",
+        image: Hiring,
+        tech: "laravel, react, mysql",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec lectus mi. Vestibulum fringilla mauris ut magna ultrices, vel vehicula enim posuere. Proin volutpat quam nec sapien fermentum, non congue mauris fringilla. Duis ullamcorper venenatis ligula, sit amet yyyeugiat. Nunc eget augue eget orci volutpat gravida in vel erat.",
+      },
+    ],
+    []
+  );
   const [isVisible, setIsVisible] = useState([]);
 
   useEffect(() => {
